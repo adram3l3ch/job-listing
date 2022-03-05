@@ -6,7 +6,7 @@ const SingleJob = ({ job }) => {
     const tags = [job.role, job.level, ...job.languages, ...job.tools];
     let img = job.company.replace(/[" ".]/g, "").toLowerCase();
     return (
-        <article className="job">
+        <article className={job.featured ? "job border" : "job"}>
             <div className="job__left">
                 <div className="job__left__image">
                     <img

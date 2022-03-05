@@ -6,8 +6,11 @@
     justify-content: space-between;
     background-color: white;
     border-radius: 0.5rem;
-    border-left: 0.5rem solid var(--primary-400);
     box-shadow: 0 0.5rem 1.5rem hsla(180, 29%, 50%, 0.383);
+}
+
+.job.border {
+    border-left: 0.4rem solid var(--primary-400);
 }
 
 .job__left,

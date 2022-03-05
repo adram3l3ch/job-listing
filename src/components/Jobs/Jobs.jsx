@@ -1,8 +1,9 @@
 import React from "react";
-import data from "../../data.json";
+import { useGlobalContext } from "../../context";
 import SingleJob from "../SingleJob/SingleJob";
 
 const Jobs = () => {
+    const { jobs } = useGlobalContext();
     const style = {
         display: "flex",
         flexDirection: "column",
@@ -12,7 +13,7 @@ const Jobs = () => {
     };
     return (
         <section className="jobs" style={style}>
-            {data.map((job) => (
+            {jobs.map((job) => (
                 <SingleJob job={job} key={job.id} />
             ))}
         </section>

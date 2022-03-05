@@ -30,4 +30,5 @@ body {
 .app__main {
     padding: 4rem 1rem;
     background-color: var(--primary-200);
+    position: relative;
 }
