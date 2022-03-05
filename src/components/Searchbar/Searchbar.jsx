@@ -42,6 +42,7 @@ const Searchbar = () => {
             </div>
             <input
                 type="text"
+                placeholder="FIlter..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 list="tags"

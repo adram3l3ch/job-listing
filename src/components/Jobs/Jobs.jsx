@@ -6,6 +6,7 @@ const Jobs = () => {
     const { jobs } = useGlobalContext();
     return (
         <section className="jobs">
+            <h2 style={{ position: "absolute", left: "-99999px" }}>Jobs</h2>
             {jobs.map((job) => (
                 <SingleJob job={job} key={job.id} />
             ))}
