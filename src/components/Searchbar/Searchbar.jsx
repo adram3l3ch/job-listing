@@ -25,19 +25,21 @@ const Searchbar = () => {
 
     return (
         <form className="form">
-            {tags.map((tag) => (
-                <div className="filter">
-                    <div className="left">{tag}</div>
-                    <button
-                        className="right"
-                        onClick={() => {
-                            setTags(tags.filter((t) => t !== tag));
-                        }}
-                    >
-                        <img src={close} alt="remove" />
-                    </button>
-                </div>
-            ))}
+            <div className="filters">
+                {tags.map((tag) => (
+                    <div className="filter" key={tag}>
+                        <div className="left">{tag}</div>
+                        <button
+                            className="right"
+                            onClick={() => {
+                                setTags(tags.filter((t) => t !== tag));
+                            }}
+                        >
+                            <img src={close} alt="remove" />
+                        </button>
+                    </div>
+                ))}
+            </div>
             <input
                 type="text"
                 value={input}
@@ -51,7 +53,9 @@ const Searchbar = () => {
                     </option>
                 ))}
             </datalist>
-            <button onClick={() => setTags([])}>Clear</button>
+            <button onClick={() => setTags([])} type="reset">
+                Clear
+            </button>
         </form>
     );
 };

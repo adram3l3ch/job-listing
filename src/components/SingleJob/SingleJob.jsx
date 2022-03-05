@@ -31,7 +31,7 @@ const SingleJob = ({ job }) => {
             </div>
             <div className="job__right">
                 {tags.map((tag) => (
-                    <Tag title={tag} />
+                    <Tag title={tag} key={tag} />
                 ))}
             </div>
         </article>

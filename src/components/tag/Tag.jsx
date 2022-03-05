@@ -1,16 +1,13 @@
 import React from "react";
+import { useGlobalContext } from "../../context";
 
 const Tag = ({ title }) => {
-    const style = {
-        backgroundColor: "var(--primary-300)",
-        padding: "0.5rem",
-        borderRadius: "0.5rem",
-        color: "var(--primary-400)",
-        fontWeight: "600",
-        fontSize: "0.9rem",
+    const { setTags } = useGlobalContext();
+    const addTag = () => {
+        setTags((tags) => (tags.includes(title) ? tags : [...tags, title]));
     };
     return (
-        <div className="tag" style={style}>
+        <div className="tag" onClick={addTag}>
             {title}
         </div>
     );
